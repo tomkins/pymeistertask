@@ -1,1 +1,7 @@
 *.pyc
+
+# Tox
+.tox/
+.coverage
+.coverage.*
+htmlcov/
