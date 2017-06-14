@@ -10,7 +10,8 @@ class CommentsAPI(ResourceAPI):
 
     def create(self, task_id, data):
         return self._create_object(
-            url='/tasks/{task_id}/comments'.format(task_id=task_id), data=data,
+            url='/tasks/{task_id}/comments'.format(task_id=task_id),
+            data=data,
         )
 
     def get(self, id):

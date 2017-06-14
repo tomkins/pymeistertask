@@ -10,6 +10,7 @@ from .tasks import TasksAPI
 
 
 class MeisterTaskAPI(object):
+
     def __init__(self, bearer_token):
         self.session = requests.session()
         self.session.headers = {

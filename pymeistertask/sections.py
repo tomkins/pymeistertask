@@ -13,7 +13,8 @@ class SectionsAPI(ResourceAPI):
 
     def create(self, project_id, data):
         return self._create_object(
-            url='/projects/{project_id}/sections'.format(project_id=project_id), data=data,
+            url='/projects/{project_id}/sections'.format(project_id=project_id),
+            data=data,
         )
 
     def get(self, id):

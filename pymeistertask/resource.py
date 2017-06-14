@@ -1,4 +1,3 @@
-
 API_URL = 'https://www.meistertask.com/api{url}'
 
 

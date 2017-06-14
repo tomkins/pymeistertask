@@ -19,7 +19,8 @@ class TasksAPI(ResourceAPI):
 
     def create(self, section_id, data):
         return self._create_object(
-            url='/sections/{section_id}/tasks'.format(section_id=section_id), data=data,
+            url='/sections/{section_id}/tasks'.format(section_id=section_id),
+            data=data,
         )
 
     def get(self, id):

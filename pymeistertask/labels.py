@@ -10,7 +10,8 @@ class LabelsAPI(ResourceAPI):
 
     def create(self, project_id, data):
         return self._create_object(
-            url='/projects/{project_id}/labels'.format(project_id=project_id), data=data,
+            url='/projects/{project_id}/labels'.format(project_id=project_id),
+            data=data,
         )
 
     def get(self, id):

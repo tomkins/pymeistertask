@@ -10,7 +10,8 @@ class TaskLabelsAPI(ResourceAPI):
 
     def create(self, task_id, data):
         return self._create_object(
-            url='/tasks/{task_id}/task_labels'.format(task_id=task_id), data=data,
+            url='/tasks/{task_id}/task_labels'.format(task_id=task_id),
+            data=data,
         )
 
     def get(self, id):
