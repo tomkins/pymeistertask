@@ -4,7 +4,7 @@ from setuptools import find_packages, setup
 
 setup(
     name='pymeistertask',
-    version='0.1a1',
+    version='0.1',
     description='MeisterTask client library',
     long_description='MeisterTask client library',
     url='https://github.com/developersociety/pymeistertask',
