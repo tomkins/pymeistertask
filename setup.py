@@ -13,6 +13,8 @@ setup(
     platforms=['any'],
     packages=find_packages(exclude=['tests']),
     include_package_data=True,
+    python_requires='>=3.3',
+    install_requires=['requests>=2.0.0'],
     classifiers=[
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
