@@ -9,7 +9,7 @@ class PersonsAPI(ResourceAPI):
     _resource = Person
 
     def get(self, id):
-        return self._get_object(url='/sections/{id}'.format(id=id))
+        return self._get_object(url='/persons/{id}'.format(id=id))
 
     def all(self):
         return self._get_list(url='/persons')
