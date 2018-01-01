@@ -1,0 +1,171 @@
+{
+  "http_interactions": [
+    {
+      "recorded_at": "2018-01-03T16:38:17",
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "name=Test+Project"
+        },
+        "headers": {
+          "Authorization": "Bearer <MEISTERTASK_TOKEN>",
+          "Content-Length": "17",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "method": "POST",
+        "uri": "https://www.meistertask.com/api/projects"
+      },
+      "response": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "{\"id\":1866102,\"token\":\"xLuZjz82\",\"name\":\"Test Project\",\"notes\":null,\"status\":1,\"share_token\":null,\"share_token_enabled\":false,\"created_at\":\"2018-01-03T16:38:17.027129Z\",\"updated_at\":\"2018-01-03T16:38:17.027129Z\"}"
+        },
+        "headers": {
+          "Cache-Control": "max-age=0, private, must-revalidate",
+          "Connection": "keep-alive",
+          "Content-Type": "application/json; charset=utf-8",
+          "Date": "Wed, 03 Jan 2018 16:38:17 GMT",
+          "ETag": "W/\"eeae26001869d151d529ea90e483e86a\"",
+          "Server": "nginx/1.12.2",
+          "Strict-Transport-Security": "max-age=15552000",
+          "Transfer-Encoding": "chunked",
+          "Vary": "Accept-Encoding",
+          "X-Cloud-Trace-Context": "0dd8c5a9b237439fc974ac1854ff8dfe;o=1",
+          "X-Request-Id": "1f7b0234-a025-49d6-b272-0404f17e6451",
+          "X-Request-Origin": "xapp3",
+          "X-Runtime": "0.207134"
+        },
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "url": "https://www.meistertask.com/api/projects"
+      }
+    },
+    {
+      "recorded_at": "2018-01-03T16:38:17",
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "name=Test+Section"
+        },
+        "headers": {
+          "Authorization": "Bearer <MEISTERTASK_TOKEN>",
+          "Content-Length": "17",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "method": "POST",
+        "uri": "https://www.meistertask.com/api/projects/1866102/sections"
+      },
+      "response": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "{\"id\":6703725,\"name\":\"Test Section\",\"description\":null,\"color\":null,\"status\":1,\"project_id\":1866102,\"sequence\":0.0,\"created_at\":\"2018-01-03T16:38:17.528432Z\",\"updated_at\":\"2018-01-03T16:38:17.528432Z\"}"
+        },
+        "headers": {
+          "Cache-Control": "max-age=0, private, must-revalidate",
+          "Connection": "keep-alive",
+          "Content-Type": "application/json; charset=utf-8",
+          "Date": "Wed, 03 Jan 2018 16:38:17 GMT",
+          "ETag": "W/\"a3f9e59a30ca63bc3306ea93dc0becff\"",
+          "Server": "nginx/1.12.2",
+          "Strict-Transport-Security": "max-age=15552000",
+          "Transfer-Encoding": "chunked",
+          "Vary": "Accept-Encoding",
+          "X-Cloud-Trace-Context": "757843817a6749bf82d1cb04e3ae99c7;o=0",
+          "X-Request-Id": "da364636-6497-49c6-912f-c78b14962f2e",
+          "X-Request-Origin": "xapp3",
+          "X-Runtime": "0.069960"
+        },
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "url": "https://www.meistertask.com/api/projects/1866102/sections"
+      }
+    },
+    {
+      "recorded_at": "2018-01-03T16:38:17",
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": ""
+        },
+        "headers": {
+          "Authorization": "Bearer <MEISTERTASK_TOKEN>"
+        },
+        "method": "GET",
+        "uri": "https://www.meistertask.com/api/sections/6703725"
+      },
+      "response": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "{\"id\":6703725,\"name\":\"Test Section\",\"description\":null,\"color\":null,\"status\":1,\"project_id\":1866102,\"sequence\":0.0,\"created_at\":\"2018-01-03T16:38:17.528432Z\",\"updated_at\":\"2018-01-03T16:38:17.528432Z\"}"
+        },
+        "headers": {
+          "Cache-Control": "max-age=0, private, must-revalidate",
+          "Connection": "keep-alive",
+          "Content-Type": "application/json; charset=utf-8",
+          "Date": "Wed, 03 Jan 2018 16:38:17 GMT",
+          "ETag": "W/\"a3f9e59a30ca63bc3306ea93dc0becff\"",
+          "Server": "nginx/1.12.2",
+          "Strict-Transport-Security": "max-age=15552000",
+          "Transfer-Encoding": "chunked",
+          "Vary": "Accept-Encoding",
+          "X-Cloud-Trace-Context": "e49759051a9f4888c50488c262ecd1c3;o=0",
+          "X-Request-Id": "9f59b969-1b17-4530-9010-aebab2ffe130",
+          "X-Request-Origin": "xapp3",
+          "X-Runtime": "0.036437"
+        },
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "url": "https://www.meistertask.com/api/sections/6703725"
+      }
+    },
+    {
+      "recorded_at": "2018-01-03T16:38:17",
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "status=4"
+        },
+        "headers": {
+          "Authorization": "Bearer <MEISTERTASK_TOKEN>",
+          "Content-Length": "8",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "method": "PUT",
+        "uri": "https://www.meistertask.com/api/projects/1866102"
+      },
+      "response": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "{\"id\":1866102,\"token\":\"xLuZjz82\",\"name\":\"Test Project\",\"notes\":null,\"status\":4,\"share_token\":null,\"share_token_enabled\":false,\"created_at\":\"2018-01-03T16:38:17.027130Z\",\"updated_at\":\"2018-01-03T16:38:17.758989Z\"}"
+        },
+        "headers": {
+          "Cache-Control": "max-age=0, private, must-revalidate",
+          "Connection": "keep-alive",
+          "Content-Type": "application/json; charset=utf-8",
+          "Date": "Wed, 03 Jan 2018 16:38:17 GMT",
+          "ETag": "W/\"a7298606d519910785761d6a51300396\"",
+          "Server": "nginx/1.12.2",
+          "Strict-Transport-Security": "max-age=15552000",
+          "Transfer-Encoding": "chunked",
+          "Vary": "Accept-Encoding",
+          "X-Cloud-Trace-Context": "7ea06934cc404162c439894b5fb900e7;o=0",
+          "X-Request-Id": "ddc5c778-b51b-4841-946f-a4453905d14c",
+          "X-Request-Origin": "xapp3",
+          "X-Runtime": "0.108068"
+        },
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "url": "https://www.meistertask.com/api/projects/1866102"
+      }
+    }
+  ],
+  "recorded_with": "betamax/0.8.0"
+}

@@ -38,12 +38,10 @@ lint: ## Lint the project.
 lint: yapf-lint isort-lint flake8-lint
 
 test: ## Run unit and integration tests.
-test:
-	@echo "Currently not available for this project."
+test: pytest-test
 
 test-report: ## Run and report on unit and integration tests.
-test-report:
-	@echo "Currently not available for this project."
+test-report: coverage-clean test coverage-report
 
 release: ## Package and release this project to PyPi.
 release: clean build-release
@@ -113,10 +111,10 @@ isort-version:
 	isort --version
 
 isort-lint: isort-version
-	isort --recursive --check-only --diff pymeistertask
+	isort --recursive --check-only --diff pymeistertask tests
 
 isort-format: isort-version
-	isort --recursive pymeistertask
+	isort --recursive pymeistertask tests
 
 
 # Flake8
@@ -125,8 +123,11 @@ flake8-lint:
 
 
 # Coverage
-coverage-report: coverage-html coverage-xml
+coverage-report: coverage-combine coverage-html coverage-xml
 	coverage report --show-missing
+
+coverage-combine:
+	coverage combine
 
 coverage-html:
 	coverage html
@@ -142,16 +143,21 @@ coverage-clean:
 
 # YAPF
 yapf-lint:
-	yapf_lint_output="`yapf -r -p -d --style .style.yapf pymeistertask`" && \
+	yapf_lint_output="`yapf -r -p -d --style .style.yapf pymeistertask tests`" && \
 	if [[ $$yapf_lint_output ]]; then echo -e "$$yapf_lint_output"; exit 1; fi
 
 yapf-format:
-	yapf -r -i -p --style .style.yapf pymeistertask
+	yapf -r -i -p --style .style.yapf pymeistertask tests
 
 
 #pipdeptree
 pipdeptree-check:
 	@pipdeptree --warn fail > /dev/null
+
+
+# Project testing
+pytest-test:
+	coverage run -m pytest
 
 
 # Help

@@ -1,3 +1,7 @@
 flake8==3.3.0
 isort==4.2.15
 yapf==0.16.1
+coverage==4.4.2
+pytest==3.3.1
+betamax==0.8.0
+betamax-serializers==0.2.0
