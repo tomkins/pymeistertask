@@ -45,10 +45,6 @@ test-report: ## Run and report on unit and integration tests.
 test-report:
 	@echo "Currently not available for this project."
 
-deploy: ## Deploy this project to demo or live.
-deploy:
-	@echo "Not a deployable project. Maybe you want to do a 'make release' instead?"
-
 release: ## Package and release this project to PyPi.
 release: clean build-release
 
