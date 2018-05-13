@@ -1,20 +1,23 @@
 language: python
+
 python:
   - "3.4"
   - "3.5"
   - "3.6"
 install:
   - pip install tox-travis
+
+script:
+  - tox
+
 stages:
   - lint
   - test
+
 jobs:
   include:
     - stage: lint
       python:
-        - "3.6"
+        - 3.6
       script:
         - tox -e lint
-    - stage: test
-      script:
-        - tox
