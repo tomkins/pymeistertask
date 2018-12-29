@@ -70,8 +70,8 @@ build-release:
 	@echo
 	@echo "A checklist before you continue:"
 	@echo
-	@echo " - have you ran 'versionbump'?"
-	@echo " - have you pushed the commit and tag created by 'versionbump'?"
+	@echo " - have you ran 'bumpversion'?"
+	@echo " - have you pushed the commit and tag created by 'bumpversion'?"
 	@echo " - are you sure the project is in a state to be released?"
 	@echo
 	@read -p "Press <enter> to continue. Or <ctrl>-c to quit and address the above points."
