@@ -105,13 +105,10 @@ pip-install-local: venv-check
 
 
 # ISort
-isort-version:
-	isort --version
-
-isort-lint: isort-version
+isort-lint:
 	isort --recursive --check-only --diff pymeistertask tests
 
-isort-format: isort-version
+isort-format:
 	isort --recursive pymeistertask tests
 
 
