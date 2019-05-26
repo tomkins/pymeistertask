@@ -1,6 +1,6 @@
 flake8==3.7.7
 isort==4.3.20
-yapf==0.16.1
+black==19.3b0; python_version >= '3.6'
 coverage==4.5.3
 pytest==4.5.0
 betamax==0.8.1

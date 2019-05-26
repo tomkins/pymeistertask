@@ -10,12 +10,9 @@ from .tasks import TasksAPI
 
 
 class MeisterTaskAPI(object):
-
     def __init__(self, bearer_token):
         self.session = requests.session()
-        self.session.headers = {
-            'Authorization': 'Bearer {}'.format(bearer_token),
-        }
+        self.session.headers = {"Authorization": "Bearer {}".format(bearer_token)}
 
         # API endpoints
         self._comments = None
@@ -69,4 +66,4 @@ class MeisterTaskAPI(object):
         return self._tasks
 
     def __repr__(self):
-        return '<MeisterTaskAPI>'
+        return "<MeisterTaskAPI>"

@@ -1,4 +1,4 @@
-API_URL = 'https://www.meistertask.com/api{url}'
+API_URL = "https://www.meistertask.com/api{url}"
 
 
 class Resource(object):
@@ -23,10 +23,10 @@ class Resource(object):
         repr_list = []
         for attr in repr_attrs:
             if hasattr(self, attr):
-                repr_list.append('{}: {!r}'.format(attr, getattr(self, attr)))
+                repr_list.append("{}: {!r}".format(attr, getattr(self, attr)))
 
-        resource_repr = ', '.join(repr_list)
-        return '<%s {%s} at %d>' % (self.__class__.__name__, resource_repr, id(self))
+        resource_repr = ", ".join(repr_list)
+        return "<%s {%s} at %d>" % (self.__class__.__name__, resource_repr, id(self))
 
     def __iter__(self):
         for attr in self._setattrs:
