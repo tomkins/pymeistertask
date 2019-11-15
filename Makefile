@@ -146,7 +146,7 @@ black-format:
 
 #pipdeptree
 pipdeptree-check:
-	@pipdeptree --warn fail > /dev/null
+	pipdeptree --warn fail > /dev/null
 
 
 # Project testing
