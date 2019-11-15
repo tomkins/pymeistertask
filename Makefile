@@ -90,7 +90,7 @@ ifndef VIRTUAL_ENV
 endif
 
 venv-wipe: venv-check
-	if ! pip list --format=freeze | grep -v "^pip=\|^setuptools=\|^six=\|^wheel=" | xargs pip uninstall -y; then \
+	if ! pip list --format=freeze | grep -v "^pip=\|^setuptools=\|^wheel=" | xargs pip uninstall -y; then \
 	    echo "Nothing to remove"; \
 	fi
 
