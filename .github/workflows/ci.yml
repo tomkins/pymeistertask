@@ -1,0 +1,40 @@
+name: CI
+on: pull_request
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: '3.7'
+      - name: Run tox
+        run: |
+          pip install tox
+          tox -e lint
+  test:
+    name: Test - Python ${{ matrix.python }}
+    runs-on: ubuntu-18.04
+    strategy:
+      matrix:
+        python:
+          - '3.5'
+          - '3.6'
+          - '3.7'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Run tox
+        run: |
+          PYTHON_VERSION="${{ matrix.python }}"
+          pip install tox
+          tox -e py${PYTHON_VERSION//./}
+      - name: Upload coverage
+        run: bash <(curl -s https://codecov.io/bash)
