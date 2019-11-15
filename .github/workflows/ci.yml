@@ -11,10 +11,10 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: '3.7'
-      - name: Run tox
+      - name: Run lint
         run: |
-          pip install tox
-          tox -e lint
+          pip install --requirement requirements/testing.txt
+          make lint
   test:
     name: Test - Python ${{ matrix.python }}
     runs-on: ubuntu-18.04
@@ -31,10 +31,10 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: ${{ matrix.python }}
-      - name: Run tox
+      - name: Run tests
         run: |
           PYTHON_VERSION="${{ matrix.python }}"
-          pip install tox
-          tox -e py${PYTHON_VERSION//./}
+          pip install --requirement requirements/testing.txt
+          make test-report
       - name: Upload coverage
         run: bash <(curl -s https://codecov.io/bash)
